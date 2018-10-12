@@ -1,0 +1,12 @@
+Get-AzureRmSubscription
+
+Select-AzureRmSubscription -SubscriptionId <id>
+
+
+az webapp deployment user set --user-name Deployer13 --password <password>
+
+az webapp deployment source config-local-git --name hr-console-freidlina --resource-group adventure-works-rg
+
+git remote add azure https://Deployer13@hr-console-freidlina.scm.azurewebsites.net/hr-console-freidlina.git
+
+git push azure initial:master
