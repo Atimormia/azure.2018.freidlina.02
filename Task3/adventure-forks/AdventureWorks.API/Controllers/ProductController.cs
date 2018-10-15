@@ -1,4 +1,5 @@
-﻿using AdventureWorks.Services.Production;
+﻿using System;
+using AdventureWorks.Services.Production;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -38,8 +39,8 @@ namespace AdventureWorks.API.Controllers
         // DELETE: api/Product/5
         public void Delete(int id)
         {
-            ProductService productService = new ProductService();
-            productService.DeleteProduct(id);
+                ProductService productService = new ProductService();
+                productService.DeleteProduct(id);
         }
     }
 }
